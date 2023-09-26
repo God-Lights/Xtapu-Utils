@@ -22,7 +22,7 @@ loom {
     splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"xtapu" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
@@ -31,6 +31,12 @@ loom {
 }
 
 dependencies {
+	implementation 'javax.annotation:javax.annotation-api:1.3.2'
+	implementation 'javax.annotation:javax.annotation-api:1.3.2'
+	implementation 'javax.annotation:javax.annotation-api:1.3.2'
+	implementation 'javax.annotation:javax.annotation-api:1.3.2'
+	implementation 'javax.annotation:javax.annotation-api:1.3.2'
+
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
@@ -55,6 +61,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.release = 17
+	it.options.encoding = "UTF-8"
 }
 
 java {
